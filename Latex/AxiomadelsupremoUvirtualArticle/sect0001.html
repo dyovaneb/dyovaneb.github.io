@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Axioma del Supremo : Nociones previas</title>
+<link rel="next" href="sect0002.html" title="Supremo e ánfimo" />
+<link rel="prev" href="index.html" title="Axioma del Supremo " />
+<link rel="up" href="index.html" title="Axioma del Supremo " />
+<link rel="stylesheet" href="styles/theme-white.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">Axioma del Supremo </a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class=" active current">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Nociones previas</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Supremo e ánfimo</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Axioma del Supremo</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h1 id="a0000000002">1 Nociones previas</h1>
+<p> Antes de presentar el axioma del supremo, axioma de los námeros reales, estudiaremos una serie de definiciones que sirven para acotar conjuntos: cotas superiores e inferiores, máximos y mánimos, supremos e ánfimos. <br /> </p>
+<p>Acotado Superiormente Un conjunto \(A\) es acotado superiormente si existe un real \(M\) que es mayor o igual que todos los elementos del conjunto \(A\), es decir, </p>
+<div class="equation" id="AcotadoSup">
+<p>
+  <div class="equation_content">
+    \begin{equation}  \label{AcotadoSup} \mbox{Existe}\, \, M\in \mathbb {R}\, \, \mbox{tal que}:\, \, \,  x\leq M\, \, \, \mbox{para todo}\, \, x\in A. \end{equation}
+  </div>
+  <span class="equation_label">1</span>
+</p>
+</div>
+<p> Al námero \(M\), lo llamaremos cota superior de \(A\).  </p>
+<p>Observacián: Cualquier otro real mayor que \(M\), tambián será una cota superior de \(A\). </p>
+<p>Acotado Inferiormente Un conjunto \(A\) es acotado interiormente si existe un real \(m\) que es menor o igual que todos los elementos del conjunto \(A\), es decir, </p>
+<div class="displaymath" id="a0000000005">
+  \[ \mbox{Existe}\, \, m\in \mathbb {R}\, \, \mbox{tal que}:\, \, \,  m\leq x\, \, \, \mbox{para todo}\, \, x\in A. \]
+</div>
+<p> Al námero \(m\), lo llamaremos cota inferior de \(A\).  </p>
+<p>Ejemplos </p>
+<ul class="itemize">
+  <li><p>El conjunto \(\{ 2,4,5,6,8,11\} \) es acotado superiormente por cualquier námero mayor que 11 y es acotado inferiormente por cualquier námero menor que 2. </p>
+</li>
+  <li><p>El conjunto \(\{ x\in \mathbb {R};\,  x{\lt}3\} \) es acotado superiormente por cualquier námero mayor o igual a 3 y no es acotado inferiormente. </p>
+</li>
+  <li><p>El conjunto \(\{ x^2+1;\,  -1\leq x\leq 1\} \) es acotado superiormente por cualquier numero mayor o igual a 2. </p>
+</li>
+</ul>
+<p>Definicián Un conjunto acotado superior e inferiormente, diremos que es un conjunto acotado. </p>
+<p>Observacián: Una forma de demostrar que un conjunto \(A\) es acotado, es probar que existe un \(C{\gt}0\) tal que \(|x| {\lt} C\) para todo \(x\in A\). </p>
+<p>Definicián (Máximo) Diremos que un conjunto \(A\) posee máximo, si posee una cota superior que pertenece al conjunto. </p>
+<p>Definicián (Mánimo) Diremos que un conjunto \(A\) posee mánimo, si posee una cota inferior que pertenece al conjunto. </p>
+<p>Obeservacián </p>
+<ol class="enumerate">
+  <li><p>Note que el máximo de un conjunto es el mayor elemento del conjunto y que el mánimo de un conjunto es el menor elemento del conjunto. </p>
+</li>
+  <li><p>Note tambián que si el máximo existe, este es ánico. Lo mismo ocurre con el mánimo. </p>
+</li>
+</ol>
+<p>Ejemplos </p>
+<ul class="itemize">
+  <li><p>\(A=\{ 2,4,5,6,8,11\} \) tiene como máximo a 11 y como mánimo a 2. </p>
+</li>
+  <li><p>El conjunto \(\{ x\in \mathbb {R};\,  x{\lt}3\} \) no posee mánimo ni máximo. </p>
+</li>
+  <li><p>El conjunto \(\{ x\in \mathbb {R};\,  x\leq 3\} \) no posee mánimo y tiene como máximo a 3. </p>
+</li>
+  <li><p>En el conjunto \(\{ x^2+1;\,  -1\leq x\leq 1\} \) el mánimo es 1 y el máximo es 2 </p>
+</li>
+</ul>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <a href="index.html" title="Axioma del Supremo"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Axioma del Supremo"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0002.html" title="Supremo e ánfimo"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</body>
+</html>

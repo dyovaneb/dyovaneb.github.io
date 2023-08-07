@@ -1,0 +1,172 @@
+\documentclass[5pt]{article} % en min\'uscula!
+ % fuentes de LaTeX
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsmath,amssymb} % S\'imbolos
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}{Ejemplo}
+\newtheorem{Definicion}{Definici\'on}
+\newtheorem{Corolario}{Corolario}
+\newtheorem{Prueba}{Prueba}
+\newtheorem{Lema}{Lema}
+\newtheorem{Proposicion}{Proposici\'{o}n}
+\newtheorem{Observacion}{Observaci\'on}
+%\usecolortheme{beaver}
+%\usepackage{textpos}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\changefontsizes[8pt]{8pt}
+\title{Axioma del Supremo }
+%\titlegraphic{\includegraphics[width=2cm]{logo}}
+\author{\vspace{.5cm}Departamento de Matem\'atica y C.C.\\ \vspace{.1cm}Universidad de Santiago de Chile}
+%\author[The author]{\includegraphics[height=1cm,width=2cm]{logo}\\The Author}
+%Patricio Cerda Loyola\\
+%Mery Choque Valdez }
+\date{\tiny Coordinacián de Cálculo I\\ \vspace{.1 cm} Primera versián Abril 2020}
+\begin{document}
+	\maketitle
+
+\section{Nociones previas}
+Antes de presentar el axioma del supremo, axioma de los námeros reales, estudiaremos una serie de definiciones que sirven para acotar conjuntos: cotas superiores e inferiores, máximos y mánimos,
+supremos e ánfimos. \\\vspace{.3cm}
+
+
+{Acotado Superiormente} Un conjunto $A$ es acotado superiormente si existe un real $M$ que es mayor o igual que todos los elementos del conjunto $A$, es decir,
+	\begin{equation}
+        \label{AcotadoSup}
+	    \mbox{Existe}\,\,M\in\mathbb{R}\,\,\mbox{tal que}:\,\,\, x\leq M\,\,\,\mbox{para todo}\,\,x\in A.
+	\end{equation}
+Al námero $M$, lo llamaremos cota superior de $A$.
+	\vspace{.2cm}
+
+
+
+Observacián: Cualquier otro real mayor que $M$, tambián será una cota superior de $A$.
+
+
+
+
+	{Acotado Inferiormente} Un conjunto $A$ es acotado interiormente si existe un real $m$ que es menor o igual que todos los elementos del conjunto $A$, es decir,
+		$$\mbox{Existe}\,\,m\in\mathbb{R}\,\,\mbox{tal que}:\,\,\, m\leq x\,\,\,\mbox{para todo}\,\,x\in A.$$
+		Al námero $m$, lo llamaremos cota inferior de $A$.
+		\vspace{.2cm}
+
+
+{Ejemplos}
+\begin{itemize}
+	\item El conjunto $\{2,4,5,6,8,11\}$ es acotado superiormente por cualquier námero mayor que 11 y es acotado inferiormente por cualquier námero menor que 2.
+
+	\item El conjunto $\{x\in\mathbb{R};\, x<3\}$ es acotado superiormente por cualquier námero mayor o igual a 3 y no es acotado inferiormente.
+
+	\item El conjunto $\{x^2+1;\, -1\leq x\leq 1\}$ es acotado superiormente por cualquier numero mayor o igual a 2.
+\end{itemize}
+
+
+
+
+
+	{Definicián} Un conjunto acotado superior e inferiormente, diremos que es un conjunto acotado.
+
+
+	Observacián: Una forma de demostrar que un conjunto $A$ es acotado, es probar que existe un $C>0$ tal que $|x| < C$ para todo $x\in A$.
+
+	{Definicián (Máximo)}
+		Diremos que un conjunto $A$ posee máximo, si posee una cota superior
+		que pertenece al conjunto.
+
+	{Definicián (Mánimo)}
+	Diremos que un conjunto $A$ posee mánimo, si posee una cota inferior que
+	pertenece al conjunto.
+
+
+
+
+{Obeservacián}
+\begin{enumerate}
+	\item Note que el máximo de un conjunto es el mayor elemento del conjunto
+	y que el mánimo de un conjunto es el menor elemento del conjunto.
+
+	\item Note tambián que si el máximo existe, este es ánico. Lo mismo ocurre con el mánimo.
+\end{enumerate}
+	
+
+	{Ejemplos}
+		\begin{itemize}
+			\item $A=\{2,4,5,6,8,11\}$ tiene como máximo a 11 y como mánimo a 2.
+			\item El conjunto $\{x\in\mathbb{R};\, x<3\}$ no posee mánimo ni máximo.
+			\item El conjunto $\{x\in\mathbb{R};\, x\leq3\}$ no posee mánimo y tiene como máximo a 3.
+
+			\item En el conjunto $\{x^2+1;\, -1\leq x\leq 1\}$ el mánimo es 1 y el máximo es 2
+		\end{itemize}
+	
+
+
+
+\section{Supremo e ánfimo}
+{Definicián de Supremo}
+	Diremos que un conjunto $A$ posee supremo \eqref{AcotadoSup}, si existe un real $S$ que satisface
+	las siguientes condiciones:
+	\begin{itemize}
+		\item $S$ es una cota superior de $A$.
+		\item Cualquier otra cota superior de $A$ es mayor que $S$.
+	\end{itemize}
+Observacián: Al real $S$, lo llamaremos supremo de $A$ y denotaremos por $sup\,A$.
+
+
+{Definicián de ánfimo}
+	Diremos que un conjunto $A$ posee ánfimo, si existe un real $I$ que satisface
+	las siguientes condiciones:
+	\begin{itemize}
+		\item $I$ es una cota inferior de $A$.
+		\item Cualquier otra cota inferior de $A$ es menor que $I$.
+	\end{itemize}
+Observacián: Al real $I$, lo llamaremos ánfimo de $A$ y denotaremos por $inf\,A$.
+
+
+
+
+	{Ejemplo}
+		\begin{itemize}
+			\item $A = (-\infty, 2)$ . Tiene como supremo el valor 2, ya que 2 es cota superior del conjunto y
+			cualquier otra cota superior de A será mayor que 2. No tiene ánfimo pues no está acotado inferiormente.
+			\item  $A = [-10, 5]$. Está acotado superior e inferiormente y tiene a -10 como ánfimo y a 5 como supremo (-10 es mánimo y 5 es máximo).
+		\end{itemize}
+	
+
+		{Propiedades}
+		Sean $A$ y $B$ dos conjuntos, definimos $A + B = \{x + y\, :\, x \in A,\,\, y\in B\}$ y $A \cdot B =
+		\{x \cdot y \,: \,x \in A,\,\, y \in B\}$, entonces
+		\begin{itemize}
+			\item $sup(A + B) = sup(A) + sup(B)$.
+			\item $sup(A \cdot B) = sup(A) \cdot sup(B)$. Para $A,B \subset [0,\infty)$.
+		\end{itemize}
+
+
+
+\section{Axioma del Supremo}
+	{Axioma del Supremo}
+			Todo conjunto no vacáo y acotado superiormente posee un supremo.
+
+
+{Aplicaciones del Axioma de Supremo}
+\begin{itemize}
+	\item {\bf Parte Entera}: La parte entera de un real $x > 0$, se definirá como el supremo del	conjunto $A = \{n \in \mathbb{N}\, :\, n \leq x\}$. Esto está bien definido pues el conjunto $A$ es acotado superiormente por $x$ y además $0\in A$. Por lo tanto por el axioma del supremo, el conjunto $A$ posee supremo. Este
+	supremo será denotado por $[x]$ y se llamará parte entera de $x$.
+
+	\item Los námeros naturales no son acotados superiormente.
+
+	\item {\bf Propiedad Arquimediana}: El conjunto $\mathbb{R}$ es arquimediano, es decir, para todo real $x > 0$, existe un natural $n \in \mathbb{N}$, tal que $n \cdot x > 1$.
+
+\end{itemize}
+
+
+
+
+
+
+	{Teorema}
+Los racionales son densos en los reales. Esto significa que dados dos reales $x, y$
+con $x < y$, entonces existe un racional $r$ tal que $x < r < y$.
+
+
+\end{document}
